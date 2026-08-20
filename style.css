@@ -624,6 +624,16 @@ left: 5vw; }
   line-height: 1.3;
 }
 
+.modalHeading .protocolHighlight {
+  white-space: nowrap;
+}
+
+@media (max-width: 400px) {
+  .modalHeading {
+    font-size: 19px;
+  }
+}
+
 .modalButtons {
   display: flex;
   gap: 12px;
