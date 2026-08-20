@@ -631,14 +631,19 @@ left: 5vw; }
 
 .modalButton {
   flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 64px;
   background: #C6E45C;
   border: 2px solid #F25C3B;
   color: #F25C3B;
   font-family: 'Albert Sans', sans-serif;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 14px;
+  line-height: 1.25;
   text-align: center;
-  padding: 20px 8px;
+  padding: 10px 8px;
   border-radius: 14px;
   cursor: pointer;
   user-select: none;
