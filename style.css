@@ -629,6 +629,11 @@ left: 5vw; }
    (Shown after "Begin", before gender select — instructs the
    learner to place their phone on the cardboard dummy.)
    ======================================== */
+#cardboardTutorial {
+  justify-content: flex-start;   /* stop centering the whole group vertically */
+  padding-top: 8vh;              /* space below the status bar/notch — pushes bubble down */
+}
+
 .tutorialBubble {
   position: relative;
   background: #fff;
@@ -664,7 +669,7 @@ left: 5vw; }
   border-radius: 20px;
   object-fit: cover;
   display: block;
-  margin-bottom: 36px;
+  margin-bottom: 20px;   /* was 36px — tightens gap so Done sits higher */
 }
 
 .tutorialDoneBtn {
