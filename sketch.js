@@ -631,6 +631,8 @@ window.onload = () => {
 
     // --- Screen Element Definitions ---
     const begin1 = document.getElementById("begin1");
+    const cardboardTutorial = document.getElementById("cardboardTutorial");
+    const tutorialDoneBtn = document.getElementById("tutorialDoneBtn");
     const gender = document.getElementById("gender");
     const intro = document.getElementById("intro");
     const checkdanger = document.getElementById("checkdanger");
@@ -1064,10 +1066,17 @@ window.onload = () => {
         userStartAudio();
         mic.start();
         begin1.style.display = "none";
-        gender.style.display = "flex";
+        cardboardTutorial.style.display = "flex";
     };
     beginBtn.onclick = handleBegin;
     beginBtn.addEventListener('touchstart', handleBegin);
+
+    const handleTutorialDone = () => {
+        cardboardTutorial.style.display = "none";
+        gender.style.display = "flex";
+    };
+    tutorialDoneBtn.onclick = handleTutorialDone;
+    tutorialDoneBtn.addEventListener('touchstart', handleTutorialDone);
     // Tapping the intro bubble used to jump straight to cpr5 (skipping
     // the whole check-danger/response/breathing flow). It now first asks
     // whether the learner has already followed the check-call-compress
