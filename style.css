@@ -628,12 +628,12 @@ left: 5vw; }
    TUTORIAL SCREEN
    (Shown after "Begin", before gender select — instructs the
    learner to place their phone on the cardboard dummy.)
+   Uses the same default centered layout as #begin1 (no
+   justify-content/padding-top override) so the whole group always
+   stays within whatever viewport height is actually visible — this
+   keeps the Done button from being pushed off-screen on Chrome
+   mobile, where the address bar eats into the visible height.
    ======================================== */
-#cardboardTutorial {
-  justify-content: flex-start;   /* stop centering the whole group vertically */
-  padding-top: 8vh;              /* space below the status bar/notch — pushes bubble down */
-}
-
 .tutorialBubble {
   position: relative;
   background: #fff;
@@ -648,7 +648,7 @@ left: 5vw; }
   width: 80vw;
   max-width: 340px;
   box-sizing: border-box;
-  margin-bottom: 30px;
+  margin-bottom: 24px;   /* was 30px — slightly tighter gap to photo */
 }
 
 .tutorialBubbleTail {
@@ -669,7 +669,7 @@ left: 5vw; }
   border-radius: 20px;
   object-fit: cover;
   display: block;
-  margin-bottom: 20px;   /* was 36px — tightens gap so Done sits higher */
+  margin-bottom: 24px;   /* was 36px — tighter gap to Done button, still centered as a group */
 }
 
 .tutorialDoneBtn {
